@@ -1,20 +1,24 @@
 
 
 .main{
-    position:relative;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   position:absolute;
+   top:60%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   grid-gap:3rem;
+   
 }
 
 
 .card {
     
-   
-    
     width:380px;
     height:290px;
    box-shadow:  5px 0px 9px 1px #888888;
+
+   
 }
 .card img{
     width:100%;
