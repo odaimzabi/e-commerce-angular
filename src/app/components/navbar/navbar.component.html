@@ -3,12 +3,27 @@
 <nav>
 
     <span class="logo">LOGO</span>
+    <span class="cart" routerLink="/cart">
+    <fa-icon [icon]="faCart" (click)="redirect()">
+    </fa-icon>
+    <p-badge [value]="value" class="badge"></p-badge>
+</span>
+    
 
-    <ul>
-        <li >Login</li>
-        <li>Sign up</li>
+    <ul *ngIf="isLoggedIn; else elseBlock">
+        <li><span>{{username}}</span></li>
+        <li><button pButton type="button" (click)="logout()" label="Logout" class="p-button-text p-button-warning"></button></li>
     </ul>
     
+    <ng-template #elseBlock>
+
+        <ul>
+            <li ><button pButton type="button" routerLink="/login" label="Login" class="p-button-text p-button-secondary"></button></li>
+            <li><button pButton type="button"  routerLink="/signup"label="Sign Up" class="p-button-text p-button-secondary"></button></li>
+        </ul>
+
+
+    </ng-template>
 </nav>
 <div>
      

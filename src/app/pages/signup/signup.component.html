@@ -1,0 +1,16 @@
+<div class="form"> 
+    <span class="p-float-label">
+    
+        <form #form="ngForm" (ngSubmit) = "onClickSubmit(form.value)">
+            <input  name="email" id="float-input" type="text" placeholder="Email" pInputText ngModel> 
+               
+        <input  name="username" id="float-input" type="text" placeholder="Username" pInputText ngModel> 
+     
+    
+        <input id="float-input" name="password" type="text" placeholder="Password" pInputText ngModel> 
+    
+        <button pButton type="submit" label="Sign Up" ></button>
+    </form>
+    
+    </span>
+    </div> 

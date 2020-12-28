@@ -1,17 +1,20 @@
 
 
-<div class="form"> 
+ <div class="form"> 
+     
+<span class="p-float-label">
 
-<input type="text" placeholder="Username" (change)="getUsername($event)">
-<input type="text" placeholder="Password">
+    <form #form="ngForm" (ngSubmit) = "onClickSubmit(form.value)">
+    <input  name="email" id="float-input" type="text" placeholder="Email" pInputText ngModel> 
+ 
 
-<!-- <input type="checkbox" value="Keep me logged in"> -->
+    <input id="float-input" name="password" type="text" placeholder="Password" pInputText ngModel> 
 
-<button type="submit">Login</button>
+    <button pButton type="submit" label="Log in"></button>
+</form>
 
-
-
-</div>
+</span>
+</div> 
 
 
 <router-outlet></router-outlet>
